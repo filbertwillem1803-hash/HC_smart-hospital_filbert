@@ -227,7 +227,7 @@ with st.form("triage_form"):
 if submitted:
     patient= pd.DataFrame([{
         'age'          : age,
-        'gender'       : gemder_map.get(gender, 0),
+        'gender'       : gender_map.get(gender, 0),
         'fever'        : int(fever),
         'cough'        : int(cough),
         'headache'     : int(headache),
