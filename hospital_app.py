@@ -224,7 +224,7 @@ with st.form("triage_form"):
 
 # ── Result ────────────────────────────────────────────────────────────────────
 #Input Submit
-if submited:
+if submitted:
     patient= pd.dataframe([{
         'age'          : age,
         'gender'       : gemder_map.get(gender, 0),
