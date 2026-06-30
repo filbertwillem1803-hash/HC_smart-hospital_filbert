@@ -255,7 +255,7 @@ if submitted:
     proba    = model.predict_proba(patient_scaled[features])[0]
     dept_name = dept_map_inv[pred]
     confidence = proba[pred] * 100
-    info       = dept_info[dept_name]
+    info       = DEPT_INFO[dept_name]
     
     
     st.markdown("---")
