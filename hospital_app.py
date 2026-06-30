@@ -6,7 +6,7 @@ import pickle
 import os
 
 #Page Title
-st.set_page_config(smart hospital patient navigator", poage_icon="🏥",layout="wide")
+st.set_page_config(smart hospital patient navigator", page_icon='🏥',layout="wide")
 
 #HTML and CSS
 st.markdown("""
