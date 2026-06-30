@@ -42,7 +42,7 @@ div[data-testid="stCheckbox"] label {
 #Load the Model
 def load_model():
     with open('hospital_model.pkl', 'rb') as f:
-        ereturn pickle.load(f)
+        return pickle.load(f)
         
 bundle    =load_model()
 model     =bundle['model']
