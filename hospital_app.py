@@ -44,9 +44,9 @@ def load_model():
     with open('hospital_model.pkl', 'rb') as f:
         return pickle.load(f)
         
-bundle    =load_model()
-model     =bundle['model']
-scaler    =bundle['scaler']
+bundle    = load_model()
+model     = bundle['model']
+scaler    = bundle['scaler']
 cols_to_scale  = bundle['cols_to_scale']
 dept_map_inv   = bundle ['dept_map_inv']
 gender_map     = bundle ['gender_map']
