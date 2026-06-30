@@ -246,15 +246,15 @@ if submited:
         'chief_complaint'    : cc_map.get(chief_complaint, 9),
     }])
 
-patient_scaled = patient.copy()
-patient_scaled[cols_to_scale] = scaler.transform(patient[cols_to_scale])
+    patient_scaled = patient.copy()
+    patient_scaled[cols_to_scale] = scaler.transform(patient[cols_to_scale])
 
 
-pred      = model.predict(patient_scaled[features])[0]
-prioba    = model.predict_proba(patient_scaled[features])[0]
-deppt_name = dept_map_inv[pred]
-confidence = prob[pred] * 100
-info       = dept_info[dept_name]
+    pred      = model.predict(patient_scaled[features])[0]
+    proba    = model.predict_proba(patient_scaled[features])[0]
+    dept_name = dept_map_inv[pred]
+    confidence = prob[pred] * 100
+    info       = dept_info[dept_name]
     
     
     st.markdown("---")
