@@ -254,7 +254,7 @@ if submitted:
     pred      = model.predict(patient_scaled[features])[0]
     proba    = model.predict_proba(patient_scaled[features])[0]
     dept_name = dept_map_inv[pred]
-    confidence = prob[pred] * 100
+    confidence = proba[pred] * 100
     info       = dept_info[dept_name]
     
     
