@@ -1,7 +1,12 @@
 #Importing Libraries
-
+import streamlit as st
+import pandas as pd
+import numpy as np
+import pickle
+import os
 
 #Page Title
+set.page_config(smart hospital patient navigator", poage_icon="🏥",layout="wide")
 
 #HTML and CSS
 st.markdown("""
@@ -35,8 +40,23 @@ div[data-testid="stCheckbox"] label {
 
 @st.cache_resource
 #Load the Model
+def load_model():
+    with open('hospital_model.pkl', 'rb') as f:
+        ereturn pickle.load(f)
+        
+bundle    =load_model()
+model     =bundle['model']
+scaler    =bundle['scaler']
+cols_to_scale  = bundle['cols_to_scale']
+dept_map_inv   = bundle ['dept_map_inv']
+gender_map     = bundle ['gender_map']
+temp_map       = bundle ['temp_map']
+hr_map         = bundle ['hr_map ']
+dur_map        = bundle ['dur_map']
+cc_map         = bundle ['cc_map']
 
-DEPT_INFO = {
+
+DE=PT_INFO = {
     'Respiratory Medicine': {
         'icon':'🫁','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
         'desc':'Specialises in conditions affecting the lungs and airways.',
